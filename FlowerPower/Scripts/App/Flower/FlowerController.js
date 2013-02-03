@@ -75,6 +75,7 @@ function (Backbone, FlowersCollection, FlowerModel, Template, a, b, ko) {
                                 var dialog = this;
                                 model.save({}, {
                                     success: function () {
+                                        self.collection.add(model);
                                         $(dialog).dialog("destroy");
                                     },
                                     error: function () {
@@ -95,7 +96,8 @@ function (Backbone, FlowersCollection, FlowerModel, Template, a, b, ko) {
                     var dialog = "#add_flower_dialog";
 
                     var dialogError = "#flower_error";
-                    var model = self.collection.get(self.selected); if (model) {
+                    var model = self.collection.get(self.selected);
+                    if (model) {
                         var view_model = kb.viewModel(model);
                         ko.applyBindings(view_model, $('#add_flower_dialog')[0]);
                         $(dialog).dialog({
@@ -110,7 +112,6 @@ function (Backbone, FlowersCollection, FlowerModel, Template, a, b, ko) {
                                     var dialog = this;
                                     model.save({}, {
                                         success: function () {
-                                            self.collection.add(model);
                                             $(dialog).dialog("destroy");
                                         },
                                         error: function () {

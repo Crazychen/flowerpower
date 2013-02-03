@@ -85,3 +85,4 @@ C:\Users\adrian\Documents\GitHub\flowerpower\FlowerPower\bin\WebMatrix.Data.dll
 C:\Users\adrian\Documents\GitHub\flowerpower\FlowerPower\bin\WebMatrix.WebData.dll
 C:\Users\adrian\Documents\GitHub\flowerpower\FlowerPower\bin\WebMatrix.Data.xml
 C:\Users\adrian\Documents\GitHub\flowerpower\FlowerPower\bin\WebMatrix.WebData.xml
+C:\Users\adrian\Documents\GitHub\flowerpower\FlowerPower\obj\Release\FlowerPower.csprojResolveAssemblyReference.cache
