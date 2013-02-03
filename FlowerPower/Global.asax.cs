@@ -27,7 +27,7 @@ namespace FlowerPower
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             Database.SetInitializer<FlowerContext>(null);
-            WebSecurity.InitializeDatabaseConnection("FlowerConnection", "UserProfile", "Id", "Name", autoCreateTables: true);
+            WebSecurity.InitializeDatabaseConnection("FlowerConnection", "Users", "UserId", "UserName", autoCreateTables: true);
             AuthConfig.RegisterAuth();
         }
     }

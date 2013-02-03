@@ -1,0 +1,21 @@
+﻿<div id="flower_placeholder" style="width:100%;height:100%;position:relative;float:left;" >
+       <div data-bind="template: { name: 'Flower_List_Template' }"></div>
+</div>
+
+<script type="text/html" id="Flower_List_Template">
+        <div data-bind="foreach:flowers">
+<div class="flower_placeholder"> 
+   <div class="flower_name" data-bind="text:Name"></div>
+        <div data-bind="click:function(){$parent.check($data);}" class="flower_logo">
+            <img src="/Images/nice-flowers.jpg" data-bind="attr:{src:Logo,id:'flower-id-'+Id()}" />
+        </div>
+</div>
+</div>
+</script>
+
+<div id="add_flower_dialog" class="add_flower" style="display:none">
+<input type="text" placeholder="Name" data-bind="value:Name" />
+<input type="text" placeholder="Logo" data-bind="value:Logo"/>
+<div id="flower_error"></div>
+</div>
+   

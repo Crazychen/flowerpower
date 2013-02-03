@@ -19,7 +19,7 @@ namespace FlowerPower.Controllers
         // GET api/Flowers
         public IEnumerable<Flower> GetFlowers()
         {
-            return db.Flowers.Where(x => true).AsEnumerable();
+            return db.Flowers.AsEnumerable();
         }
 
         // GET api/Flowers/5
@@ -37,7 +37,7 @@ namespace FlowerPower.Controllers
         // PUT api/Flowers/5
         public HttpResponseMessage PutFlower(int id, Flower flower)
         {
-            if (ModelState.IsValid && id == flower.Id)
+            if ( id == flower.Id)
             {
                 db.Entry(flower).State = EntityState.Modified;
 
@@ -61,7 +61,8 @@ namespace FlowerPower.Controllers
         // POST api/Flowers
         public HttpResponseMessage PostFlower(Flower flower)
         {
-            if (ModelState.IsValid)
+
+            try
             {
                 db.Flowers.Add(flower);
                 db.SaveChanges();
@@ -70,9 +71,9 @@ namespace FlowerPower.Controllers
                 response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = flower.Id }));
                 return response;
             }
-            else
+            catch (Exception e)
             {
-                return Request.CreateResponse(HttpStatusCode.BadRequest);
+                return Request.CreateResponse(HttpStatusCode.NotAcceptable);
             }
         }
 

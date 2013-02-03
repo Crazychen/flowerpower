@@ -219,8 +219,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Custom.css" />
+    <Content Include="Content\images\ui-icons_3399ff_0.png" />
+    <Content Include="Content\images\ui-icons_525252_0.png" />
+    <Content Include="Content\images\ui-icons_66B3FF_0.png" />
+    <Content Include="Content\images\ui-icons_d4d4d4_0.png" />
+    <Content Include="Content\images\ui-icons_ffffff_0.png" />
     <Content Include="Content\jasmine\jasmine.css" />
     <Content Include="Content\jasmine\jasmine_favicon.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery.metro.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -278,6 +285,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\bg.png" />
+    <Content Include="Images\favicon.ico" />
     <Content Include="Images\flowers_44.jpg" />
     <Content Include="Images\garden.png" />
     <Content Include="Images\icon_conditii_s.png" />
@@ -296,6 +304,10 @@
     <Content Include="Images\logo_flower_power.png" />
     <Content Include="Scripts\App\Config.js" />
     <Content Include="Scripts\App\App.js" />
+    <Content Include="Scripts\App\Flower\FlowerModel.js" />
+    <Content Include="Scripts\App\Flower\FlowersCollection.js" />
+    <Content Include="Scripts\App\Flower\FlowerTemplate.html" />
+    <Content Include="Scripts\App\Flower\FlowerController.js" />
     <Content Include="Scripts\App\JasmineMain.js" />
     <Content Include="Scripts\App\JasmineConfig.js" />
     <Content Include="Scripts\App\Router.js" />
@@ -303,6 +315,16 @@
     <Content Include="Scripts\jasmine\jasmine-html.js" />
     <Content Include="Scripts\jasmine\jasmine.js" />
     <Content Include="Scripts\libs\jasmine\jasmine-amd.js" />
+    <Content Include="Scripts\libs\jquery\jqueryui.js" />
+    <Content Include="Scripts\libs\knockback\amd-0.16.7\knockback.js" />
+    <Content Include="Scripts\libs\knockback\amd-0.16.7\knockback.min.js" />
+    <Content Include="Scripts\libs\knockback\Copy of knockback.js" />
+    <Content Include="Scripts\libs\knockback\knockback.js" />
+    <Content Include="Scripts\libs\knockback\knockback.min.js" />
+    <Content Include="Scripts\libs\knockout\knockout.debug.js" />
+    <Content Include="Scripts\libs\knockout\knockout.js" />
+    <Content Include="Scripts\libs\knockout\knockout.mapping.js" />
+    <Content Include="Scripts\libs\knockout\knockout.min.js" />
     <Content Include="Scripts\lib\backbone.js" />
     <Content Include="Scripts\lib\backbone.min.js" />
     <Content Include="Scripts\libs\jasmine\jasmine-html.js" />

@@ -1,10 +1,12 @@
 ﻿define([
   // Application.
   "App",
-  'backbone'
+  'backbone',
+  'Flower/FlowerController',
+  'jquery',
 ],
 
-function (app, Backbone) {
+function (app, Backbone, FlowerController) {
     var Router = Backbone.Router.extend({
         routes: {
             "/": "index",
@@ -57,28 +59,8 @@ function (app, Backbone) {
             $(".link").removeClass("selected");
             $(".flower-menu a").addClass("selected");
             $(".flower-menu a").css("z-index", 100);
-            $.ajax({
-                url: "/api/flowers",
-                type: "POST",
-                data: {
-                    Name: "Flower Power",
-                }
-            }).success(function () {
-                $.ajax({
-                    url: "/api/flowers",
-                    type: "GET"
-                }).success(function (data) {
-                    console.log(data);
-
-                    for (var i in data) {
-                        $.ajax({
-                            url: "/api/flowers/" + data[i].Id,
-                            type: "DELETE"
-                        });
-                        $("#flowers").append("<p>" + data[i].Name + "</p>");
-                    }
-                });
-            });
+            var controller = new FlowerController();
+            self._initController(controller);
         },
         _showOperationMenu: function (offset) {
             var menuOperation = "#menu_operation";
@@ -89,7 +71,15 @@ function (app, Backbone) {
             var self = this;
             $(placeholder).parent().children().hide();
             $(placeholder).show();
+        },
+        _initController: function (controller) {
+            var self = this;
+            if (self.controller && self.controller.remove)
+                self.controller.remove();
+            controller.render();
+            self.controller = controller;
         }
+
     });
 
     return Router;

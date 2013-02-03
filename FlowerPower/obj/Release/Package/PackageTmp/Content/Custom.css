@@ -243,12 +243,15 @@ a {
 
 .flower_placeholder {
     text-align: center;
-    width: 160px;
-    height: 120px;
+    padding: 2px;
+    width: 120px;
+    height: 116px;
     float: left;
     position: relative;
-    margin: 16px;
+    margin: 8px;
+    cursor: pointer;
 }
+
 
 .flower_name {
     width: 120px;
@@ -262,13 +265,23 @@ a {
     text-shadow: 1px 1px 1px 1px#5e6369;
 }
 
+.delete:hover {
+    color: #ca2727;
+}
+
+.selected_flower {
+    border: 2px solid #00ff35;
+}
+
 .flower_logo {
     width: 120px;
     height: 90px;
     float: left;
     position: relative;
     margin: 5px;
+    padding: 2px;
 }
+
 
     .flower_logo img {
         box-shadow: 1px 2px 5px 1px #757b7f;

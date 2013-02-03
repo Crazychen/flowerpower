@@ -3,9 +3,13 @@ require.config({
     deps: ["Main"],
     paths: {
         // Use the underscore build of Lo-Dash to minimize incompatibilities.
-        jquery: '../libs/jquery/jquery',
-        underscore: '../libs/underscore/underscore-amd',
-        backbone: '../libs/backbone/backbone-amd'
+        jquery: '/Scripts/libs/jquery/jquery',
+        jqueryui: '/Scripts/libs/jquery/jqueryui',
+        underscore: '/Scripts/libs/underscore/underscore-amd',
+        backbone: '/Scripts/libs/backbone/backbone-amd',
+        knockout: '/Scripts/libs/knockout/knockout',
+        knockback: '/Scripts/libs/knockback/amd-0.16.7/knockback',
+        text: '/Scripts/libs/require/text',
         // Put additional paths here.
     },
     map: {
@@ -15,6 +19,8 @@ require.config({
         // Put additional maps here.
     },
     shim: {
+        'jqueryui': 'jquery',
+        'knockback': 'knockout',
         // Put shims here.
     }
 

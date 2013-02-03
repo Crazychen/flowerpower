@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" />
     @Styles.Render("~/Content/css")
     <script data-main="/Scripts/App/Config" src="/Scripts/lib/require.js"></script>
 </head>
@@ -11,9 +12,9 @@
     <div class="content-wrapper">
         <div class="left-left-part ">
             <div id="menu_operation" style="display: none;">
-                <div class="operation_button add-button">Add</div>
-                <div class="operation_button update-button">Edit</div>
-                <div class="operation_button delete-button">Del</div>
+                <div id="add_button" class="operation_button add-button">Add</div>
+                <div id="edit_button" class="operation_button update-button">Edit</div>
+                <div id="del_button" class="operation_button delete-button">Del</div>
             </div>
         </div>
         <div class="content-wrapper-wrapp">
